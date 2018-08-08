@@ -30,7 +30,7 @@ export class BlogListFilters extends React.Component { // this allows us to add 
               autoFocus
               defaultValue={this.props.filters.text}
               onChange={this.onTextChange}
-              placeholder={'Search expenses'} 
+              placeholder={'Search blogs'} 
             />
           </div>
           <div className="input-group__item">
