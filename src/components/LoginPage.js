@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 export const LoginPage = ({ startLogin }) => (
   <div className="box-layout">
     <div className="box-layout__box">
-      <h1 className="box-layout__title">Boilerplate</h1>
-      <p>Tag line for app.</p>
+      <h1 className="box-layout__title">TJH Blog</h1>
+      <p>A React based blog site.</p>
       <button className="button" onClick={startLogin} >Login with Google</button>
       <Link to="/"><p className="button">Back to blogs</p></Link>
     </div>

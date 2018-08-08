@@ -33,9 +33,6 @@ export default class BlogForm extends React.Component {
       this.setState(() => ({ createdAt }));
     }
   };
-  onFocusChange = ({ focused }) => {
-    this.setState(() => ({ calendarFocused: focused }))
-  };
   onSubmit = (e) => {
     e.preventDefault();
 
@@ -47,7 +44,7 @@ export default class BlogForm extends React.Component {
         title: this.state.title,
         body: this.state.body,
         createdAt: this.state.createdAt.valueOf(),
-        lastEditedAt: this.state.lastEditedAt.valueOf()
+        lastEditedAt: moment().valueOf()
       }) // we pass the data up so that the form can remain re-usable
     }
   };

@@ -1,9 +1,12 @@
 import React from 'react';
+import BlogListFilters from './BlogListFilters';
+import BlogListPublic from './BlogListPublic';
 
 const HomePage = () => (
   
   <div>
-    This is the viewers home page
+    <BlogListFilters />
+    <BlogListPublic />
   </div>
 );
 

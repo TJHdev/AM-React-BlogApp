@@ -75,7 +75,7 @@ export const startSetBlogs = (blogsData = []) => {
     const uid = getState().auth.uid;
     return database.ref(`users/${uid}/blogs`).once('value').then((snapshot) => {
       const blogs = [];
-   
+      console.log(snapshot)
       snapshot.forEach((childSnapshot) => {
         blogs.push({
           id: childSnapshot.key,
@@ -87,6 +87,21 @@ export const startSetBlogs = (blogsData = []) => {
   }
 };
 
+export const startSetBlogsPublic = (blogsData = []) => {
+  return (dispatch, getState) => {
+    return database.ref('users').once('value').then((snapshot) => {
+      const blogs = [];
+      Object.keys(snapshot.val()).forEach((childSnapshot) => {
+        Object.keys(snapshot.val()[childSnapshot].blogs).forEach((blog) => {
+          blogs.push({
+            id: blog,
+            ...snapshot.val()[childSnapshot].blogs[blog]
+          })
+        })
+      })
+   
+      dispatch(setBlogs(blogs));
+    });
+  }
+};
 
-
- 

@@ -10,16 +10,26 @@ exports[`should render LoginPage correctly 1`] = `
     <h1
       className="box-layout__title"
     >
-      Boilerplate
+      TJH Blog
     </h1>
     <p>
-      Tag line for app.
+      A React based blog site.
     </p>
     <button
       className="button"
     >
       Login with Google
     </button>
+    <Link
+      replace={false}
+      to="/"
+    >
+      <p
+        className="button"
+      >
+        Back to blogs
+      </p>
+    </Link>
   </div>
 </div>
 `;

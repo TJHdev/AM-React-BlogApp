@@ -2,7 +2,7 @@ import 'react-dates/initialize';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { startSetBlogs } from './actions/blogs';
+import { startSetBlogs, startSetBlogsPublic } from './actions/blogs';
 import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import 'normalize.css/normalize.css'
@@ -44,7 +44,10 @@ firebase.auth().onAuthStateChanged((user) => {
     
   } else {
     store.dispatch(logout());
-    renderApp();
-    // history.push('/');
+
+    store.dispatch(startSetBlogsPublic()).then(() => {
+      renderApp();
+      // history.push('/');
+    })
   }
 });

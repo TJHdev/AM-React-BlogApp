@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import BlogListItem from './BlogListItem';
+import BlogListItemPublic from './BlogListItemPublic';
 import selectBlogs from '../selectors/blogs';
 
-export const BlogList = (props) => (
+export const BlogListPublic = (props) => (
   <div className="content-container">
     <div className="list-header">
       <div className="show-for-mobile">Blogs</div>
@@ -18,7 +18,7 @@ export const BlogList = (props) => (
           </div>
         ) : (
           props.blogs.map((blog) => (
-            <BlogListItem key={blog.id} {...blog} />
+            <BlogListItemPublic key={blog.id} {...blog} />
           ))
         )
       }
@@ -32,4 +32,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(BlogList);
+export default connect(mapStateToProps)(BlogListPublic);
