@@ -2,6 +2,7 @@ import 'react-dates/initialize';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { startSetBlogs } from './actions/blogs';
 import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import 'normalize.css/normalize.css'
@@ -34,10 +35,13 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(login(user.uid));
-    renderApp();
-    if (history.location.pathname === '/login') { // if we are on login page and logged in redirect to dashboard
-      history.push('/dashboard');
-    }
+    store.dispatch(startSetBlogs()).then(() => {
+      renderApp();
+      if (history.location.pathname === '/login') { // if we are on login page and logged in redirect to dashboard
+        history.push('/dashboard');
+      }
+    })
+    
   } else {
     store.dispatch(logout());
     renderApp();

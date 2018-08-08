@@ -1,4 +1,3 @@
-import uuid from 'uuid';
 import database from '../firebase/firebase.js'
 
 // component calls action generator
@@ -83,7 +82,6 @@ export const startSetBlogs = (blogsData = []) => {
           ...childSnapshot.val()
         })
       })
-   
       dispatch(setBlogs(blogs));
     });
   }

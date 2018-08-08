@@ -1,25 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { setTextFilter, sortByDate, sortByTitle } from '../actions/filters';
+import { setTextFilter, sortByDateCreated, sortByDateEdited, sortByTitle } from '../actions/filters';
 
 export class BlogListFilters extends React.Component { // this allows us to add state
   state = {
     calendarFocused: null
   };
-  onDatesChange = ({ startDate, endDate }) => {
-    this.props.setStartDate(startDate);
-    this.props.setEndDate(endDate);
-  };
-  onFocusChange = (calendarFocused) => {
-    this.setState(() => ({calendarFocused}));
-  };
   onTextChange = (e) => {
     this.props.setTextFilter(e.target.value);
   };
   onSortChange = (e) => {
-    if (e.target.value === 'date') {
-      this.props.sortByDate();
+    if (e.target.value === 'dateCreated') {
+      this.props.sortByDateCreated();
+    } else if (e.target.value === 'dateEdited') {
+      this.props.sortByDateEdited();
     } else if (e.target.value === 'title') {
       this.props.sortByTitle();
     }
@@ -44,7 +39,8 @@ export class BlogListFilters extends React.Component { // this allows us to add 
               value={this.props.filters.sortBy}
               onChange={this.onSortChange}
             >
-              <option value="date">Date</option>
+              <option value="dateCreated">Date Created</option>
+              <option value="dateEdited">Date Last Edited</option>
               <option value="title">Title</option>
             </select>
           </div>
@@ -66,7 +62,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => (
   {
     setTextFilter: (text) => dispatch(setTextFilter(text)),
-    sortByDate: () => dispatch(sortByDate()),
+    sortByDateCreated: () => dispatch(sortByDateCreated()),
+    sortByDateEdited: () => dispatch(sortByDateEdited()),
     sortByTitle: () => dispatch(sortByTitle()),
   }
 )

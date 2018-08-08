@@ -1,30 +1,18 @@
-import moment from 'moment';
+const setTextFilter = (text = '') => ({
+  type: 'SET_TEXT_FILTER',
+  text: text
+});
 
-const filtersReducerDefaultState = {
-  text: '',
-  sortBy: 'date',
-};
+const sortByDateCreated = () => ({
+  type: 'SORT_BY_DATE_CREATED'
+});
 
-const filtersReducer = (state = filtersReducerDefaultState, action) => {
-  switch (action.type) {
-    case 'SET_TEXT_FILTER':
-      return {
-        ...state,
-        text: action.text
-      };
-    case 'SORT_BY_DATE':
-      return {
-        ...state,
-        sortBy: 'date'
-      };
-    case 'SORT_BY_TITLE':
-      return {
-        ...state,
-        sortBy: 'title'
-      };
-    default: 
-      return state;
-  }
-};
+const sortByDateEdited = () => ({
+  type: 'SORT_BY_DATE_EDITED'
+});
 
-export default filtersReducer;
+const sortByTitle = () => ({
+  type: 'SORT_BY_TITLE'
+});
+
+export { setTextFilter, sortByDateCreated, sortByDateEdited, sortByTitle };
