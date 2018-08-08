@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { startLogin } from '../actions/auth';
+import { Link } from 'react-router-dom';
 
 export const LoginPage = ({ startLogin }) => (
   <div className="box-layout">
@@ -8,6 +9,7 @@ export const LoginPage = ({ startLogin }) => (
       <h1 className="box-layout__title">Boilerplate</h1>
       <p>Tag line for app.</p>
       <button className="button" onClick={startLogin} >Login with Google</button>
+      <Link to="/"><p className="button">Back to blogs</p></Link>
     </div>
   </div>
 );

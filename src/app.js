@@ -21,6 +21,7 @@ const jsx = (
 );
 
 let hasRendered = false;
+
 const renderApp = () => {
   if(!hasRendered) {
     ReactDOM.render(jsx, document.getElementById('app'));
@@ -34,12 +35,12 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(login(user.uid));
     renderApp();
-    if (history.location.pathname === '/') {
+    if (history.location.pathname === '/login') { // if we are on login page and logged in redirect to dashboard
       history.push('/dashboard');
     }
   } else {
     store.dispatch(logout());
     renderApp();
-    history.push('/');
+    // history.push('/');
   }
 });
