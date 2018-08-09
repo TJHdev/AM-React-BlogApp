@@ -1,11 +1,11 @@
 const filters = {
   text: '',
-  sortBy: 'date',
+  sortBy: 'dateCreated',
 };
 
 const altFilters = {
   text: 'mech',
-  sortBy: 'dateCreated',
+  sortBy: 'title',
 };
 
 export { filters, altFilters };

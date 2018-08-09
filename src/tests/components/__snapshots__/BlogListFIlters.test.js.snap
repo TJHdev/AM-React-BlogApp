@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render BlogListFilters correctly 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="input-group"
+  >
+    <div
+      className="input-group__item"
+    >
+      <input
+        autoFocus={true}
+        className="text-input"
+        defaultValue=""
+        onChange={[Function]}
+        placeholder="Search blogs"
+        type="text"
+      />
+    </div>
+    <div
+      className="input-group__item"
+    >
+      <select
+        className="select"
+        onChange={[Function]}
+        value="dateCreated"
+      >
+        <option
+          value="dateCreated"
+        >
+          Date Created
+        </option>
+        <option
+          value="dateEdited"
+        >
+          Date Last Edited
+        </option>
+        <option
+          value="title"
+        >
+          Title
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render BlogListFilters with alt data correctly 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="input-group"
+  >
+    <div
+      className="input-group__item"
+    >
+      <input
+        autoFocus={true}
+        className="text-input"
+        defaultValue="mech"
+        onChange={[Function]}
+        placeholder="Search blogs"
+        type="text"
+      />
+    </div>
+    <div
+      className="input-group__item"
+    >
+      <select
+        className="select"
+        onChange={[Function]}
+        value="title"
+      >
+        <option
+          value="dateCreated"
+        >
+          Date Created
+        </option>
+        <option
+          value="dateEdited"
+        >
+          Date Last Edited
+        </option>
+        <option
+          value="title"
+        >
+          Title
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+`;

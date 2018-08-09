@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render BlogList with blogs 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Blogs
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Blog
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Date Created
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <BlogListItem
+      body=""
+      createdAt={0}
+      id="1"
+      key="1"
+      lastEditedAt={0}
+      title="mechanical engineering sucks"
+    />
+    <BlogListItem
+      body="Body bOdy boDy bodY"
+      createdAt={-345600000}
+      id="2"
+      key="2"
+      lastEditedAt={345600000}
+      title="are you sure you want to do this?"
+    />
+    <BlogListItem
+      body="There are no issues here"
+      createdAt={-1209600000}
+      id="3"
+      key="3"
+      lastEditedAt={126234000000}
+      title="testing is the bane of existence"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render BlogList with empty array 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Blogs
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Blog
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Date Created
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-item list-item--message"
+    >
+      <span>
+        There are no blogs
+      </span>
+    </div>
+  </div>
+</div>
+`;
