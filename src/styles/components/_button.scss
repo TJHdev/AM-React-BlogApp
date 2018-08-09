@@ -32,3 +32,10 @@
     background-color: lighten($button-grey, 10%);
   }
 }
+
+.button--add {
+  padding: $s-size $m-size;
+  height: 5rem;
+  // align-self: center;
+  line-height: 2.75rem;
+}

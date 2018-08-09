@@ -46,7 +46,7 @@ export class BlogListFilters extends React.Component { // this allows us to add 
           </div>
           { this.props.isAuthenticated && 
             <div className="input-group__item">
-              <Link className="button" to="/create">Add Blog</Link>
+              <Link className="button button--add" to="/create">Add Blog</Link>
             </div>
           }
         </div>
