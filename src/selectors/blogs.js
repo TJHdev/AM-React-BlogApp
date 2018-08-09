@@ -12,7 +12,7 @@ const getVisibleBlogs = (blogs, { text, sortBy }) => {
     } else if (sortBy === 'dateEdited') {
       return a.lastEditedAt < b.lastEditedAt ? 1 : -1;
     } else if (sortBy === 'title') {
-      return a.title < b.title ? 1 : -1;
+      return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
     }
   });
 };
