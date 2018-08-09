@@ -44,9 +44,11 @@ export class BlogListFilters extends React.Component { // this allows us to add 
               <option value="title">Title</option>
             </select>
           </div>
-          <div className="input-group__item">
-            <Link className="button" to="/create">Add Blog</Link>
-          </div>
+          { this.props.isAuthenticated && 
+            <div className="input-group__item">
+              <Link className="button" to="/create">Add Blog</Link>
+            </div>
+          }
         </div>
       </div>
     )
@@ -55,7 +57,8 @@ export class BlogListFilters extends React.Component { // this allows us to add 
 
 const mapStateToProps = (state) => {
   return {
-    filters: state.filters
+    filters: state.filters,
+    isAuthenticated: Boolean(state.auth.uid)
   };
 };
 

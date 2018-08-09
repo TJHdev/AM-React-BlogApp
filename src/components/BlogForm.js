@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import { SingleDatePicker } from 'react-dates';
 
 const now = moment();
 
@@ -27,11 +26,6 @@ export default class BlogForm extends React.Component {
     // // alternetive implementation
     // e.persist();
     // this.setState(() => ({ e.target.value }));
-  };
-  onDateChange = (createdAt) => {
-    if (createdAt) { // prevents the user from clearing this value
-      this.setState(() => ({ createdAt }));
-    }
   };
   onSubmit = (e) => {
     e.preventDefault();
