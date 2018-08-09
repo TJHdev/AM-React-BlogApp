@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render BlogListPublic with blogs 1`] = `
+<Connect(BlogListPublic)
+  blogs={
+    Array [
+      Object {
+        "body": "",
+        "createdAt": 0,
+        "id": "1",
+        "lastEditedAt": 0,
+        "title": "mechanical engineering sucks",
+      },
+      Object {
+        "body": "Body bOdy boDy bodY",
+        "createdAt": -345600000,
+        "id": "2",
+        "lastEditedAt": 345600000,
+        "title": "are you sure you want to do this?",
+      },
+      Object {
+        "body": "There are no issues here",
+        "createdAt": -1209600000,
+        "id": "3",
+        "lastEditedAt": 126234000000,
+        "title": "testing is the bane of existence",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`should render BlogListPublic with blogs 2`] = `
+<Connect(BlogListPublic)
+  blogs={Array []}
+/>
+`;

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EditBlogPage correctly 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Edit blog
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <BlogForm
+      blog={
+        Object {
+          "body": "Body bOdy boDy bodY",
+          "createdAt": -345600000,
+          "id": "2",
+          "lastEditedAt": 345600000,
+          "title": "are you sure you want to do this?",
+        }
+      }
+      onSubmit={[Function]}
+    />
+    <button
+      className="button button--secondary"
+      onClick={[Function]}
+    >
+      Remove Blog
+    </button>
+  </div>
+  <RemoveModal
+    confirmRemoveBlog={null}
+    handleCloseRemoveModal={[Function]}
+    onRemove={[Function]}
+  />
+</div>
+`;

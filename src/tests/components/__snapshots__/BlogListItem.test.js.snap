@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders blog list item correctly 1`] = `
+<Link
+  className="list-item"
+  replace={false}
+  to="/edit/3"
+>
+  <h3
+    className="list-item__title"
+  >
+    testing is the bane of existence
+  </h3>
+  <span
+    className="list-item__subtitle"
+  >
+    1:00am, December 18th, 1969
+  </span>
+</Link>
+`;
