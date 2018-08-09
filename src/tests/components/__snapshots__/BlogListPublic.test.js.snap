@@ -5,7 +5,7 @@ exports[`should render BlogListPublic with blogs 1`] = `
   blogs={
     Array [
       Object {
-        "body": "",
+        "body": "hello",
         "createdAt": 0,
         "id": "1",
         "lastEditedAt": 0,

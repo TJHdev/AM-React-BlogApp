@@ -3,7 +3,7 @@ import moment from 'moment';
 export default [{
   id: '1',
   title: 'mechanical engineering sucks',
-  body: '',
+  body: 'hello',
   createdAt: 0,
   lastEditedAt: 0
 }, {
